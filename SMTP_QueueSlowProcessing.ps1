@@ -14,7 +14,7 @@ if ($lists.Count -gt 0) {
     {
         foreach ($list in $lists) {
             $list
-            sleep -Seconds 8
+            Start-Sleep -Seconds 8
             $list | Move-Item -Destination '\\$MailMarshalServer\c$\Program Files\MailMarshal\Queues\Incoming\'
 
         } 

@@ -57,7 +57,7 @@ if ((Get-ChildItem $mails_path).Count -gt 1000) {
         $emls.Add($parsing,$mail.fullname)
     }
 
-    $topemls = $emls.Keys | group | sort Count -Descending | select count, name -First 1
+    $topemls = $emls.Keys | Group-Object | Sort-Object Count -Descending | select count, name -First 1
 
     if ($topemls.count -gt 600) { 
 
